@@ -20,3 +20,12 @@ const startingState = store.getState();
 
 console.log('store', store);
 console.log('startingState', JSON.stringify(startingState));
+
+store.dispatch({
+  type: 'song/addSong',
+  payload: 'New Song',
+});
+
+const finalState = store.getState();
+
+console.log('finalState', JSON.stringify(finalState));
