@@ -28,3 +28,4 @@ const finalState = store.getState();
 console.log('finalState', JSON.stringify(finalState));
 
 export { store };
+export const { addSong } = songsSlice.actions;
