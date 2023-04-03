@@ -9,12 +9,10 @@ function SongPlaylist() {
   });
 
   const handleSongAdd = (song) => {
-    const action = addSong(song);
-    dispatch(action);
+    dispatch(addSong(song));
   };
   const handleSongRemove = (song) => {
-    const action = removeSong(song);
-    dispatch(action);
+    dispatch(removeSong(song));
   };
 
   const renderedSongs = songPlaylist.map((song) => {
