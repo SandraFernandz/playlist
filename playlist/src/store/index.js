@@ -21,11 +21,10 @@ const startingState = store.getState();
 console.log('store', store);
 console.log('startingState', JSON.stringify(startingState));
 
-store.dispatch({
-  type: 'song/addSong',
-  payload: 'New Song',
-});
+store.dispatch(songsSlice.actions.addSong('some song'));
 
 const finalState = store.getState();
 
 console.log('finalState', JSON.stringify(finalState));
+
+export { store };
