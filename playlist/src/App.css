@@ -1,12 +1,11 @@
 ul {
   list-style-type: none;
-  margin: 0;
-  border: 2px solid plum;
+  margin: 20px;
+  color: #4c5762;
 }
 
 .content ul li:first-of-type {
   border-top: 1px solid #ddd;
-  border: 2px solid paleturquoise;
 }
 
 .content ul li {
@@ -17,30 +16,45 @@ ul {
   justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
-  background-color: #61dafb;
 }
 
-.button {
-  background-color: salmon;
+.section-button {
+  background-color: #5c84af;
   border: none;
   outline: none;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
-h3 {
-  margin: 0;
+.title {
+  margin: 20px;
+  color: #4c5762;
+}
+
+.section-title {
+  color: #5c84af;
 }
 
 .table-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   margin: 20px;
-  background-color: skyblue;
 }
 
-.container > button {
+.reset-button {
   margin-top: 10px;
-  background-color: mediumaquamarine;
+  background-color: #c23b22;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 20px;
 }
 
 .App-header {
@@ -56,13 +70,4 @@ h3 {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

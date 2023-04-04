@@ -25,12 +25,7 @@ function MoviePlaylist() {
     return (
       <li key={movie}>
         {movie}
-        <button
-          onClick={() => handleMovieRemove(movie)}
-          className="button is-danger"
-        >
-          X
-        </button>
+        <button onClick={() => handleMovieRemove(movie)}>X</button>
       </li>
     );
   });
@@ -38,11 +33,11 @@ function MoviePlaylist() {
   return (
     <div className="content">
       <div className="table-header">
-        <h3 className="subtitle is-3">Movie Playlist</h3>
+        <h3 className="section-title">Movie Playlist</h3>
         <div className="buttons">
           <button
             onClick={() => handleMovieAdd(createRandomMovie())}
-            className="button is-link"
+            className="section-button"
           >
             + Add Movie to Playlist
           </button>

@@ -11,13 +11,12 @@ export default function App() {
   };
 
   return (
-    <div className="container is-fluid">
-      <button onClick={() => handleResetClick()} className="button is-danger">
+    <div>
+      <h3 className="title">Movie and Song Favs</h3>
+      <button onClick={() => handleResetClick()} className="reset-button">
         Reset Both Playlists
       </button>
-      <hr />
       <MoviePlaylist />
-      <hr />
       <SongPlaylist />
     </div>
   );

@@ -19,12 +19,7 @@ function SongPlaylist() {
     return (
       <li key={song}>
         {song}
-        <button
-          onClick={() => handleSongRemove(song)}
-          className="button is-danger"
-        >
-          X
-        </button>
+        <button onClick={() => handleSongRemove(song)}>X</button>
       </li>
     );
   });
@@ -32,11 +27,11 @@ function SongPlaylist() {
   return (
     <div className="content">
       <div className="table-header">
-        <h3 className="subtitle is-3">Song Playlist</h3>
+        <h3 className="section-title">Song Playlist</h3>
         <div className="buttons">
           <button
             onClick={() => handleSongAdd(createRandomSong())}
-            className="button is-link"
+            className="section-button"
           >
             + Add Song to Playlist
           </button>
