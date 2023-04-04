@@ -1,4 +1,7 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore, createSlice, createAction } from '@reduxjs/toolkit';
+
+export const reset = createAction('app/reset');
+
 const moviesSlice = createSlice({
   name: 'movie',
   initialState: [],
@@ -10,11 +13,11 @@ const moviesSlice = createSlice({
       const index = state.indexOf(action.payload);
       state.splice(index, 1);
     },
-    reset(state, action) {
-      //we want to reset our state
-      //with immer we need to mutate the state variable (and not reasigning with an empty array)
+  },
+  extraReducers(builder) {
+    builder.addCase(reset, (state, action) => {
       return [];
-    },
+    });
   },
 });
 
@@ -34,7 +37,7 @@ const songsSlice = createSlice({
   extraReducers(builder) {
     // to prevent typing errors inside the string
     // builder.addCase('movie/reset', (state,
-    builder.addCase(moviesSlice.actions.reset.toString(), (state, action) => {
+    builder.addCase(reset, (state, action) => {
       return [];
     });
   },
@@ -59,4 +62,4 @@ console.log('finalState', JSON.stringify(finalState));
 
 export { store };
 export const { addSong, removeSong } = songsSlice.actions;
-export const { addMovie, removeMovie, reset } = moviesSlice.actions;
+export const { addMovie, removeMovie } = moviesSlice.actions;
