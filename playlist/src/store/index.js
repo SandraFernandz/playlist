@@ -32,7 +32,9 @@ const songsSlice = createSlice({
     },
   },
   extraReducers(builder) {
-    builder.addCase('movie/reset', (state, action) => {
+    // to prevent typing errors inside the string
+    // builder.addCase('movie/reset', (state,
+    builder.addCase(moviesSlice.actions.reset.toString(), (state, action) => {
       return [];
     });
   },
